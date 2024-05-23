@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio #1</title>
+</head>
+
+<body>
+    <h1>Teste de Cidadania Brasileira</h1>
+    Em qual país voce nasceu? <input type="text" name="txtpais" id="txtpais">
+    <input type="button" value="Verificar" onclick="verificar()">
+    <div id='res'>
+
+    </div>
+    <script>
+        function verificar() {
+            var pais = document.getElementById('txtpais')
+            var res = document.getElementById('res')
+            var pais2 = (pais.value)
+                if (pais2 != 'Brasil') {
+                    res.innerHTML = `Como voce nasceu no <strong>${pais2}</strong>, voce nao é <strong>BRASILEIRO</strong>!`
+                } else {
+                    res.innerHTML = 'Voce nasceu no <strong>Brasil</strong>, entao voce é <strong>BRASILEIRO</strong>!'
+                }
+        }
+    </script>
+</body>
+
+</html>

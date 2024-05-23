@@ -1,0 +1,9 @@
+01 - sabe a diferença entre um cliente e um servidor para a internet?
+cliente somos nós(computador, celular, tablet e etc...) e o servidor é aquele que oferece serviços aos clientes
+
+02 - para que serve html, css e javascript?
+html é o conteudo, css é o design e o javascript é a engenharia
+
+03 - cite 4 sites que fazem uso do javascript
+google, youtube, netflix, amazon
+

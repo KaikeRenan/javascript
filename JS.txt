@@ -1,0 +1,307 @@
+website - html, css e js
+
+= (recebe)
+null (nada)
+
+window.prompt me da string
+number.parseIn(n) converte string para number              
+number.parseFloat(n) converte string para number quebrado  
+number(n) converte string para number e number quebrado
+
+String(n) converte number para string
+n.toString()
+
+comentários - // uma linha
+              /*  */ mais de uma linha 
+              só funciona dentro do JS ( <script> <script> )
+
+variaveis - guarda dados
+          - var/ let/ const
+          - identificadores (nao usar numeros no começo, espaço[usar _ ] e palavras reservadas[comandos])
+
+--------------------------------------------------------------------------------------------------------------------
+
+typeof - mostra o tipo daquele dado
+
+DATA TYPES
+
+string - conjunto de palavras ou numeros
+       - pode ser delimitada por "...", '...' e `...`
+       - s.length me da quantos caracteres tem uma string
+         s.toUpperCase() converte para letras maiusculas
+         s.toLowerCase() converte para letras minusculas
+
+number - 5 e 5,1
+       - infinity, NaN
+       - var n1 = 1545.5
+       n1.toFixed(2) vai deixar com mais uma casa
+       n1.toFixed(2).replace('.',',') vai trocar o ponto por virgula
+       n1.toLocaleString('pt-BR',{style: 'currency', currency: 'BRL'}) converte para Real
+       n1.toLocaleString('pt-BR',{style: 'currency', currency: 'USD'}) dolar
+       n1.toLocaleString('pt-BR',{style: 'currency', currency: 'EUR'}) euro
+
+boolean - true e false
+
+esses 3 sao os tipos primitivos 
+
+null
+
+undefined
+
+object - array
+
+function 
+
+--------------------------------------------------------------------------------------------------------------------
+
+Operadores - aritméricos
+
++ é igual a concatenaçao
+-
+*
+/ divisao real
+% divisao inteira , resto da divisao 
+** potenciacao
+
+precedencia - ()
+              **
+              * / %
+              + -
+
+operadores - atribuiçao
+
+auto atribuiçao -- igual-- simplificado
+var n = 3             
+n = n + 4                    n += 4
+n = n - 5                    n -= 5
+n = n * 4                    n *= 4
+n = n / 2                    n /= 2
+n = n ** 2                   n **= 2
+n = n % 5                    n %= 5
+
+incremento
+var x = 5
+x = x+1       x++     ou    ++x
+x = x-1       x--     ou    --x
+
+operadores - relacionais 
+
+5>2   true    != é diferente
+7<4   false
+8>=8  true
+9<=7  false
+5==5  true
+4!=4  false
+
+operadores - identidade - testa o tipo
+
+5 ==  '5' - true  mesmo valor numerico
+5 === '5' - false tipos diferentes
+5 ===  5  - true  tipos iguais
+x !== y           desigual restrito, tipos diferentes mas valor interno igual
+
+operadores - lógicos
+
+!    negacao          nao	relaçao de satisfaçao 
+&&   conjuncao        e		
+||   disjuncao        ou	
+
+ex:
+
+idade >= 15 && idade <=17        //a idade esta entre 15 e 17?
+estado == 'RJ' || estado == 'SP' //o estado é RJ ou SP?
+salário > 1500 && sexo !='M'     //o salário é acima de 1500 e nao é homem?
+
+operadore - ternário
+
+? :
+
+teste ? true : false
+
+ex: 
+
+média > 7?'aprovado':reprovado
+precedencia
+
+aritméticos > relacionais > lógicos
+
+--------------------------------------------------------------------------------------------------------------------
+
+DOM (DOCUMENT OBJECT MODEL)
+
+conjunto de objetos dentro do navegador que da acesso aos componentes internos do seu website
+
+ARVORE DOM (hierarquia)
+
+parent -> child
+
+window (location, document, history e etc...) -> html (head, body)
+
+head (metal, title) | body (h1, p, p, div) 
+
+2° p -> strong
+
+é possivel selecionar por Marca (getElementsByTagName()), ID (getElementById()), Nome (getElementsByName())
+Classe (getElementsByClassName()) e Seletor (querySelector())
+
+div - # class - .
+
+Eventos DOM
+
+<DIV> mousecenter mousemove mousedown mouseup click mouseout
+
+Funçoes 
+
+linhas que sao executadas dps que um evento acontecer
+
+function açao(param){
+   BLOCO
+}
+
+---------------------------------------------------------------------------------------------------------------------
+
+Sequencias
+
+var n = 3
+n += 3
+window.alert(n)
+
+Condiçoes
+
+desvio condicional     if (se) else (se n)
+
+if(condiçao) {         <---- lado esquerdo
+     true           
+} else {               <---- lado direito
+     false       
+}
+
+tipos de condiçao 
+
+C. Simples             C. Composta
+
+if(condiçao) {         if(condiçao) {
+      true                true
+}                       } else {
+                          false
+                        }
+
+C. Aninhadas (intervalos)
+
+	if(cond1) {
+	bloco 1
+	} else {
+		if(cond2) {
+		bloco 2
+		} else {
+		bloco 3 
+	}
+
+C. Múltipla (valores fixos)
+
+switch (expressao) {
+	case valor 1:
+		bloco 1
+		break
+	case valor 2:
+		bloco 2
+		break
+	case valor 3:
+		bloco 3
+		break
+	default:
+		bloco 4
+		break
+}
+
+------------------------------------------------------------------------------------------------------------
+
+Repetiçoes ou laços
+
+  while(condiçao){
+	bloo
+   }
+
+ler while como 'enquanto'
+
+1° testa e dps executa o bloco
+
+ou
+
+do{
+	bloco	
+}while(condiçao)
+
+do = faça
+
+1° executa o bloco dps testa
+
+repetiçao com variavel de controle
+
+for(inicio; teste; incremento){
+	bloco
+}
+
+----------------------------------------------------------------------------------------------------------------------
+
+variaveis compostas ou array ou vetor
+
+as variaveis simples só guardam um valor por vez já as compostas guardam varios valores
+
+começa com 0,1,2... até 9
+
+array (vetor) tem elementos, cada elemento é composto índice ou chave e cada índice tem conteudo ou valor
+
+var num = [...,...,...] isso é um array
+
+num
+...,...,...
+ 0   1   2
+
+------------------------------------------------------------------------------------------------------------------------
+
+funçoes
+
+chamada, parametro, açao, retorno
+
+sao açoes executadas assim que sao chamadas ou em decorrencia de algum evento
+
+pode receber parametros e retornar um resultado
+
+function açao (param) {		parametro
+	bloco			açao
+	return res		retorno
+}
+açao (5)			chamada
+
+function parimp(n) {			parametro
+	if (n%2==0) {			açao
+		return 'par'		retorno
+	}else {
+		return 'ímpar'
+	}
+}
+let res = parimp (11)			chamada
+
+------------------------------------------------------------------------------------------------------------------------
+
+fundamentos, variaveis, dados, operadores, condiçoes, repetiçoes, arrays, functions, DOM
+
+estudar sobre curso de html, mais sobre functions, objetos, modularizaçao, RegEx, JSON, AJAX, NodeJS, 
+
+------------------------------------------------------------------------------------------------------------------------------
+
+Objetos -  
+
+let amigo = {       ,           ,           ,          }
+
+		variavel grande
+
+ let amigo = {nome:´José´,sexo:´M´,peso:´85.4´,engordar(p){}}
+	amigo 
+	jose M 85.4 [function]
+	nome sexo peso e engordar ()
+
+		
+
+
